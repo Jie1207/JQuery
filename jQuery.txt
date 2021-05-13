@@ -1,0 +1,47 @@
+JQuery:
+
+1.一个快速、简洁的JavaScript框架；
+2.设计的宗旨是“write Less,Do More”
+3.JQuery兼容各种主流浏览器，如IE 6.0+、FF1.5+、Safari 2.0+、Opera 9.0+等
+
+
+JQuery的好处：
+ 1.简化js的复杂性
+2.不再需要关心兼容性
+3.提供大量实用方法；
+
+
+一：JQuery设计思想 -选择网页元素
+    1.模拟css选择元素     $("标签").css("backgroundColor","red"); 
+     2.独有表达式选择；   $("标签：first/last/even/odd").css("backgroundColor","red");
+     3.多种筛选方法；
+     举例子：
+             （1）取标签下标为2的标签：$("标签:eq(2)").css("backgroundColor","red"); 
+                          $("标签").eq(2).css("backgroundColor","red"); 
+              (2)取标签class为box的标签：
+                     $("标签.box").css("backgroundColor","red"); 
+                     $("标签").filter(."box").css("backgroundColor","red"); 
+二：JQuery设计思想  -JQuery写法
+  1.方法函数化；
+        (1)window.onload=function(){...} ==> $(function(){...});
+      (2)$("h1").onclick=function(){...}  ==>$("h1").click(function(){...})
+       
+   2.链式操作
+       $("h1").click(function(){...}).css("backgroundColor","red").mouseover(function(){...}).mouseout(function(){...})
+   3.取值赋值合体；
+         (1)获取div的文本
+                $("#div1").html();
+         (2)设置div的文本
+                $("#div1").html(“<h1>这是文本</h1>”);
+        (3)获取input的value值：
+             $("input").val();
+        (4)设置input的value值：
+                    $("input").val("值");
+三：JQuery与js：可以共存，不能混用。
+
+
+
+
+
+JQuery常用的方法
+    1.
