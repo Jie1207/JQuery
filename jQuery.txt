@@ -20,6 +20,7 @@ JQuery的好处：
                           $("标签").eq(2).css("backgroundColor","red"); 
               (2)取标签class为box的标签：
                      $("标签.box").css("backgroundColor","red"); 
+                   filter：对已经获取到的网页元素进行过滤。
                      $("标签").filter(."box").css("backgroundColor","red"); 
 二：JQuery设计思想  -JQuery写法
   1.方法函数化；
@@ -44,4 +45,12 @@ JQuery的好处：
 
 
 JQuery常用的方法
-    1.
+    1.index()：获取当前节点在兄弟节点的下标
+    2.eq(下标):通过下标获取指定的元素节点。
+    3.filter  过滤   对已经获取到的网页元素进行过滤
+     4.not   filter的反义词。
+     5.has   拥有，直接判定子节点中是否有符合条件的元素。
+     6.prev  查找当前兄弟节点中的上一个节点
+     7.next  查找当前兄弟节点的下一个节点。
+     8.find  查找子节点。
+     9.attr   设置和修改行间属性。
