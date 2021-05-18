@@ -26,7 +26,8 @@ JQuery的好处：
   1.方法函数化；
         (1)window.onload=function(){...} ==> $(function(){...});
       (2)$("h1").onclick=function(){...}  ==>$("h1").click(function(){...})
-       
+       （3）执行快慢：
+             $(function(){});>$(document).ready(function(){});>window.onload=function(){}
    2.链式操作
        $("h1").click(function(){...}).css("backgroundColor","red").mouseover(function(){...}).mouseout(function(){...})
    3.取值赋值合体；
@@ -42,7 +43,9 @@ JQuery的好处：
 
 
 
-
+Jquery插件方法
+         1.$.extend()   拓展工具方法     通过$.xxx() $.yyy()去调用拓展的方法
+         2.$.fn.extend()   拓展JQ的方法  通过$().xxx()  $().yyy()去调用拓展的方法
 
 JQuery常用的方法
     1.index()：获取当前节点在兄弟节点的下标
@@ -55,4 +58,36 @@ JQuery常用的方法
      7.1.nextAll()  查找当前兄弟节点的一下所有节点。
      8.find  查找子节点。
      9.attr   设置和修改行间属性。
-     10.
+     10. on 方法
+              （1）.给一个事件添加一个函数：$("#id/.class/.....").on("click",function(){...})
+                (2).同时给多个事件添加一个函数，多个事件之间可以通过空格隔开：$("#id/.class/.....").on("click  mouseover",function(){...})
+                (3).给不同的事件添加不同的函数：
+                            $("#id/.class/.....").on({
+                                click:function(){...},
+                                mouseover:function(){...},
+                                mouseout:function(){...}})
+               (4).事件委托
+                      第二个参数是触发对象的选择器
+                      $("ul").on("click","li",function(){
+                                 
+                        })
+           11.off方法
+                  $("#id").off();取消所有事件上的所有函数
+                  $("#id").off("click");取消click事件上的所有函数
+                   $("#id").off("click",show);取消click事件下指定的函数
+             12.scrollTop()滚动高度
+             13.offset()  直接获取当前元素，距离最左边的距离，margin不算在内。
+                  position()  直接获取当前元素，距离第一个有定位父节点的距离，margin算在内。
+                 offsetParent() 查找第一个有定位的父节点，如果父节点没有定位就继续往上去查找，最终找到html节点。
+             14.remove() 删除元素节点（不会保留这个元素节点上之前的事件和行为）
+             15. detach() 删除元素节点（会保留这个元素节点上之前的事件和行为）
+              16.parent() 获取父节点
+             17.parents()获取父节点们 （参数选择器）
+            18closest()必须传入参数，参数也是选择器，只获取第一个符合条件的元素。从自己开始查找。
+              19.wrap()  给每一获取到的元素节点单独包装
+             20. wrapAll() 整体包装
+               21.wrapInner()内部包装
+               22.unwrap()删除包装   删除上面一层包装，不包括body节点。
+               23.clone(）克隆节点本身，不克隆行为
+               24.clone(true)既克隆节点，也克隆元素节点行为和事件
+              25.$("标签").add("元素节点/id/class")  将多个选择器拼接起来。
