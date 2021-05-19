@@ -91,3 +91,29 @@ JQuery常用的方法
                23.clone(）克隆节点本身，不克隆行为
                24.clone(true)既克隆节点，也克隆元素节点行为和事件
               25.$("标签").add("元素节点/id/class")  将多个选择器拼接起来。
+
+
+
+
+
+
+
+
+Jquery的cookie：需引入文件jquery.cookie.js
+        $.cookie()
+          具体调用的格式
+            $.cookie(name) 通过name取值
+            $.cookie(name,value) 设置name 和value
+            $.cookie(name,value{可选项})
+            $.cookie(name,null); 删除cookie
+              举例：
+                  $.cookie("变种人","X教授",{expires:100}）//存储name为变种人，value为X教授，存储时间为100天。
+                 $.cookie("变种人")//取值X教授
+
+
+
+Jquery的ajax
+          $().load()
+         $.get()
+         $.post()
+            
